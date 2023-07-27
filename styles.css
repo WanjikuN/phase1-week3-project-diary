@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+
+   
+  }
+  
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+    font-size: 22px;
+  } 
+  
+  #diary_container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    height: 100%;
+    padding: 20px;
+  }
+  #entries div, #form_container, #entries{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 50px;
+   margin: 5%;
+   border-radius: 10px;
+   height: 50%;
+    background-color: rgb(119, 143, 140);
+    
+
+  }
+  #entries{
+    
+    background-color: rgba(218, 226, 225, 0.151);
+    overflow: auto;
+  }
+  #form_container{
+    justify-content: center;
+  }
+ button{
+  padding: 6px;
+  font-size: 20px;
+  background-color: rgb(54, 88, 57);
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+ }
+ input{
+  width: 75%;
+  height: 10%;
+ }
