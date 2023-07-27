@@ -16,8 +16,28 @@ const manipulateEntries = (data) => {
         <h5>Date :${i.date} </h5><br>
         <p> ${i.content}</p>
         `
-    
+    entry.addEventListener('click', handleUpdate)
     entry_list.appendChild(entry);
+
+
+    // PATCH
+function handleUpdate() {
+    let updateContent = prompt("Update Experience")
+    let newObj = {
+        content: updateContent,
+    }
+    fetch(`http://localhost:3030/diaryEntries/${i.id}`,{
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json',
+                Accept: 'application/json'
+    
+                 },
+        body: JSON.stringify(newObj)
+        
+
+    })
+    window.location.reload();
+}
     })
 
 }
